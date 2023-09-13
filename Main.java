@@ -30,7 +30,8 @@ public class Main
         String question=scan.nextLine();
         System.out.println("I will find you at "+question);
         System.out.println("How much cash do you have?");
-        String cashAmount=scan.next
+        String cashAmount=scan.nextDouble();
+        System.out.println("Give me $"+cashAmount);
         scan.close();
         
     }
