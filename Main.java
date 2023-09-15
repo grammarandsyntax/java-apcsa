@@ -41,11 +41,17 @@ public class Main
         numSixStarOperators++;
         System.out.println("There is now "+numLmd+" LMD in our holdings, and your current number of Top Operators is "+numSixStarOperators+".");
         Wait();
-        System.out.println("Doctor, you wish to learn more about Texas? Well, after returning from her mission in Siracusa, it is "+isSixStar+" that she has gained more experience in battle. Her redeployment time has been reduced heavily to "+redeploymentTime+" seconds. It increases by "+(redeploymentTime%2.0)+" seconds on each new redeployment.");
+        System.out.println("Doctor, you wish to learn more about Texas? Well, after returning from her mission in Siracusa, it is "+isSixStar+" that she has gained more experience in battle. Her redeployment time has been reduced heavily to "+redeploymentTime+" seconds. It increases by "+(redeploymentTime%4)+" seconds on each new redeployment.");
         Wait();
         Wait();
-        System.out.println("Wait, you want to hire more operators already?! Doctor, please let me recompensate the missing amount with some mining operations..");
+        System.out.println("Wait, you want to hire more operators already?! Doctor, please let me recompensate the missing amount with some mining operations. I'll be back tomorrow! In the meantime, please sort out miss Texas's files.");
         numOrundum=(numOrundum-6000)*2;
+        Wait();
+        System.out.println("");
+        System.out.println("(One day later..)");
+        System.out.println("");
+        Wait();
+        System.out.println("I hope I'm not interrupting, Doctor, but I've just returned with "+(numOrundum-(numOrundum/2))+" Orundum. We now hold "+numOrundum+" Orundum total.");
 
 
     }
