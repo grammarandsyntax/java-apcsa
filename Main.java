@@ -45,10 +45,7 @@ public class Main {
             Wait(3000);
 
             System.out.println("There's "+numOrundum+" orundum left.");
-            Operator Texas = new Operator();
-            Texas.setName("Texas");
-            Texas.setRedeploymentTime(18.0);
-            Texas.setAttack(219);
+            Operator Texas = new Operator("Texas",219,18.0);
 
             System.out.println(Texas.getName()+" was hired! She would however like some compensation for her work and training. The total amount will be half our current LMD amount.");
 
@@ -89,13 +86,13 @@ public class Main {
 
         System.out.println("Doctor, while I was working, I overheard some operators in the cafeteria arguing... could you please help settle it? I think it's over who has to cook..?");
         System.out.println(" ");
-        System.out.println("Do you choose Gummy or Lava as today's cook?");
-        scan = new Scanner(System.in); //scanner reuse
-        String chooseCook = scan.nextLine().toLowerCase();
-
-        Wait(4000);
 
         while(true){ //choose bwteen gum and lava
+            System.out.println("Do you choose Gummy or Lava as today's cook?");
+            scan = new Scanner(System.in); //scanner reuse
+            String chooseCook = scan.nextLine().toLowerCase();
+
+            Wait(4000);
             if (chooseCook.equals("gummy")){ //YES GOOD
 
                 Wait(3000);
@@ -118,19 +115,18 @@ public class Main {
                 catch (ArithmeticException error){
                 System.out.print("Please don't use zero for this input, doctor!");
                 }
+                break;
             }
             else if (chooseCook.equals("lava")){
 
                 Wait(3000);
                 System.out.println("It seems the operators don't like her cooking... I think we should send them to the medical wing..");
 
+                break;
             }
             else {
                 System.out.println("Dr. "+name+", the only two cooks here are Gummy or Lava!");
-                scan = new Scanner(System.in); //scanner reuse
-                System.out.println("Do you choose Gummy or Lava as today's cook?");
             }
-            break;
         }
         scan.close(); //scanner closes 
     }
