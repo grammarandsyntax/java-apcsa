@@ -92,7 +92,7 @@ public class Main {
             scan = new Scanner(System.in); //scanner reuse
             String chooseCook = scan.nextLine().toLowerCase();
 
-            Wait(4000);
+            Wait(1000);
             if (chooseCook.equals("gummy")){ //YES GOOD
 
                 Wait(3000);
@@ -117,15 +117,15 @@ public class Main {
                 }
                 break;
             }
-            else if (chooseCook.equals("lava")){
+            else if (chooseCook.equals("lava")){ //booo
 
                 Wait(3000);
                 System.out.println("It seems the operators don't like her cooking... I think we should send them to the medical wing..");
 
                 break;
             }
-            else {
-                System.out.println("Dr. "+name+", the only two cooks here are Gummy or Lava!");
+            else { //choose neither
+                System.out.println("Dr. "+name+", the only two operators to cook here are Gummy and Lava!");
             }
         }
         scan.close(); //scanner closes 
