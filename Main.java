@@ -25,7 +25,6 @@ public class Main {
         Scanner scan = new Scanner(System.in); //scanner opens
         String name=scan.nextLine();
         System.out.println("Good morning Dr. "+name+". I hope you slept well, we've got a lot of work ahead of us!");
-
         Wait(3000);
 
         System.out.println("I'll start off with a recording of your current LMD and Orundum counts.");
@@ -113,7 +112,7 @@ public class Main {
                     System.out.println("Ok, so we need to give each operator "+((double)poundsFood/numOperatorsFood)+" pounds of food."); //add truncation thing with mod
                 }
                 catch (ArithmeticException error){
-                System.out.print("Please don't use zero for this input, doctor!");
+                System.out.println("Please don't use zero for this input, doctor!");
                 }
                 break;
             }
@@ -125,7 +124,7 @@ public class Main {
                 break;
             }
             else {
-                System.out.println("Dr. "+name+", the only two cooks here are Gummy or Lava!");
+                System.out.println("Doctor, the only two cooks here are Gummy or Lava!");
             }
         }
         scan.close(); //scanner closes 
