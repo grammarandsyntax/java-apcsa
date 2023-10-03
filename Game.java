@@ -15,6 +15,9 @@ public class Game {
         }
     }
 
+    public int getNumLmd(){
+        return numLmd;
+    }
     public Game(){
         askName();
         printCurrency();
@@ -134,6 +137,10 @@ public class Game {
                 System.out.println("Doctor, the only two operators to cook here are Gummy and Lava!");
             }
         }
+        Wait(2500);
+    }
+    public void beginOperation(){
+        Operation o = new Operation();
     }
 
 }
