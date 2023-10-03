@@ -22,6 +22,7 @@ public class Operator {
     }
 
     Operator() {
+
         level = 1;
     }
 
@@ -45,7 +46,7 @@ public class Operator {
     public void setAttack(int attack){
         this.attack = attack;
     }
-    
+
     public void getAttack(){
         System.out.println(name+" has "+attack+" attack.");
     }
