@@ -24,6 +24,8 @@ public class Game {
         askToHire();
         waitLater();
         askAboutCook();
+        Operation op = new Operation();
+        op.startOperation(numLmd);
     }
 
     public void askName(){
@@ -138,9 +140,6 @@ public class Game {
             }
         }
         Wait(2500);
-    }
-    public void beginOperation(){
-        Operation o = new Operation();
     }
 
 }
