@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Game {
     private int numLmd = 340785;
     private int numOrundum = 29310;
-    private boolean isSixStar = true; //only used when six star op is mentioned (texas?)
+    private final boolean isSixStar = true; //only used when six star op is mentioned (texas?)
     private int numSixStarOperators = 0;
 
     static void Wait(int milliseconds)
