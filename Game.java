@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Game {
@@ -26,6 +27,7 @@ public class Game {
         askAboutCook();
         Operation op = new Operation();
         op.startOperation(numLmd);
+        clearScreen();
     }
 
     public void askName(){
@@ -137,6 +139,14 @@ public class Game {
             }
         }
         Wait(2500);
+    }
+
+    public void clearScreen(){
+        char c = '\n';
+        int length = 40;
+        char[] chars = new char[length];
+        Arrays.fill(chars, c);
+        System.out.print(String.valueOf(chars));
     }
 
 }

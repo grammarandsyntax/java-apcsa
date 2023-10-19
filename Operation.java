@@ -51,5 +51,6 @@ public class Operation {
             } else {
                 System.out.println("We lost! I'm fine... Get it together, everyone!");
             }
+            Wait(3000);
         }
     }
