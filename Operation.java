@@ -32,7 +32,8 @@ public class Operation {
         int chanceWon = rand.nextInt(100);
         Wait(3000);
         if (chanceWon > 15){ //operation won
-            System.out.println("Doctor, we can handle anything with you around! Now let's see what we've obtained!");
+            System.out.println("Doctor, we won! I know we can handle anything with you around! Now let's see what we've obtained!\n");
+            Wait(2000);
             int obtainedLmd = rand.nextInt(1,450);
             if (obtainedLmd >= 200){
                 System.out.println("Nice, we picked up "+obtainedLmd+" Lmd!");
@@ -40,7 +41,7 @@ public class Operation {
                 System.out.println("Ah, we picked up "+obtainedLmd+" Lmd.");
             }
             l+= obtainedLmd;
-            System.out.println("Did we get any extra materials?");
+            System.out.println("\nDid we get any extra materials?\n");
                 int obtainedMaterials = rand.nextInt(100);
                 if (obtainedMaterials>65){
                     System.out.println("Closure will find this oriron particularly useful!");
@@ -48,7 +49,7 @@ public class Operation {
                     System.out.println("Oh well, maybe next time.");
                 }
             } else {
-                System.out.println("I'm fine... Get it together, everyone!");
+                System.out.println("We lost! I'm fine... Get it together, everyone!");
             }
         }
     }
