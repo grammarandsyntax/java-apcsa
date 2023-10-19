@@ -113,10 +113,8 @@ public class Game {
             Scanner sc = new Scanner(System.in); //scanner reuse
             String chooseCook = sc.nextLine().toLowerCase();
 
-            Wait(4000);
+            Wait(2000);
             if (chooseCook.equals("gummy")){ //YES GOOD
-
-                Wait(3000);
                 System.out.println("\nIt seems the operators like her cooking! How will you divide the food among them though..?");
                 sc = new Scanner(System.in); //scanner reuse
 
@@ -140,7 +138,6 @@ public class Game {
             }
             else if (chooseCook.equals("lava")){ //booo
 
-                Wait(3000);
                 System.out.println("\nIt seems the operators don't like her cooking... I think we should send them to the medical wing..");
 
                 break;
@@ -156,7 +153,7 @@ public class Game {
         System.out.println("..but I don't think Blaze should- is that Ptilopsis? Hey!");
         Wait(2000);
         System.out.println("Ptilopsis: Rhine Lab.. so much work...\nshutting.. down...zzz");
-        Wait(1000);
+        Wait(2000);
         System.out.println("Uhh Doctor.. I think she needs some help staying awake.. what should we do?\n");
         Scanner s = new Scanner(System.in); //scanner reuse
         String askForPtilopsis = s.nextLine().toLowerCase();
