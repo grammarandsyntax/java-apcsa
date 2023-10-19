@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Game {
     private int numLmd = 340785;
@@ -15,6 +16,13 @@ public class Game {
             Thread.currentThread().interrupt();
         }
     }
+    public void clearScreen(){
+        char c = '\n';
+        int length = 40;
+        char[] chars = new char[length];
+        Arrays.fill(chars, c);
+        System.out.print(String.valueOf(chars));
+    }
 
     public int getNumLmd(){
         return numLmd;
@@ -25,9 +33,12 @@ public class Game {
         askToHire();
         waitLater();
         askAboutCook();
+        clearScreen();
         Operation op = new Operation();
         op.startOperation(numLmd);
         clearScreen();
+        waitLater();
+        ptilopsisEncounter();
     }
 
     public void askName(){
@@ -141,12 +152,32 @@ public class Game {
         Wait(2500);
     }
 
-    public void clearScreen(){
-        char c = '\n';
-        int length = 40;
-        char[] chars = new char[length];
-        Arrays.fill(chars, c);
-        System.out.print(String.valueOf(chars));
+    public void ptilopsisEncounter(){
+        System.out.println("..but I don't think Blaze should- is that Ptilopsis? Hey!");
+        Wait(2000);
+        System.out.println("Ptilopsis: Rhine Lab.. so much work...\nshutting.. down...zzz");
+        Wait(1000);
+        System.out.println("Uhh Doctor.. I think she needs some help staying awake.. what should we do?\n");
+        Scanner s = new Scanner(System.in); //scanner reuse
+        String askForPtilopsis = s.nextLine().toLowerCase();
+        Wait(1800);
+        Random rand = new Random();
+        int chanceAwoken = rand.nextInt(100);
+        if (askForPtilopsis.length()%2==0){
+            System.out.println("Let's try it out!\n");
+        }else{
+            System.out.println("That doesn't sound like a good idea..\n");
+        }
+        Wait(2000);
+        if (chanceAwoken>=70){
+            System.out.println("Ptilopsis: !!");
+            Wait(1000);
+            System.out.println("Woah! It woke her up.. and she's gone...");
+        }else{
+            System.out.println("Ptilopsis: zzz");
+            Wait(1000);
+            System.out.println("Still asleep.. maybe we should just let her rest after all.");
+        }
     }
 
 }
