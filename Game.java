@@ -39,6 +39,8 @@ public class Game {
         clearScreen();
         waitLater();
         ptilopsisEncounter();
+        waitLater();
+        endDay();
     }
 
     public void askName(){
@@ -150,7 +152,7 @@ public class Game {
     }
 
     public void ptilopsisEncounter(){
-        System.out.println("..but I don't think Blaze should- is that Ptilopsis? Hey!");
+        System.out.println("..but I don't think Blaze should- is that Ptilopsis? Hey! How are you after that operation?");
         Wait(2000);
         System.out.println("Ptilopsis: Rhine Lab.. so much work...\nshutting.. down...zzz");
         Wait(2000);
@@ -173,8 +175,13 @@ public class Game {
         }else{
             System.out.println("Ptilopsis: zzz");
             Wait(1000);
-            System.out.println("Still asleep.. maybe we should just let her rest after all.");
+            System.out.println("Still asleep..");
         }
+    }
+    public void endDay(){
+        Integer time = 18;
+        System.out.println("\nIt's been a pretty long "+time.toString()+" hours, I think I'll go to sleep. Goodnight, Doctor.");
+        Wait(2000);
     }
 
 }
