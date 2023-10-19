@@ -30,6 +30,7 @@ public class Operation {
     public void startOperation(int l){
         Random rand = new Random();
         int chanceWon = rand.nextInt(100);
+        Wait(3000);
         if (chanceWon > 15){ //operation won
             System.out.println("Doctor, we can handle anything with you around! Now let's see what we've obtained!");
             int obtainedLmd = rand.nextInt(1,450);
