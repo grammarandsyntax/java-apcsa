@@ -28,9 +28,10 @@ public class Game {
         return numLmd;
     }
     public Game(){
+        Operator o = new Operator("Angelina");
         askName();
         printCurrency();
-        askToHire();
+        askToHire(o);
         waitLater();
         askAboutCook();
         clearScreen();
@@ -41,6 +42,7 @@ public class Game {
         ptilopsisEncounter();
         waitLater();
         endDay();
+        checkOperator(o);
     }
 
     public void askName(){
@@ -58,7 +60,7 @@ public class Game {
         System.out.println("You currently have "+numLmd+" LMD and "+numOrundum+" Orundum.");
 
     }
-    public void askToHire(){
+    public void askToHire(Operator o){
         System.out.println("Do you want to hire operators?");
         Scanner scan = new Scanner(System.in); //scanner reuse
         String askHireOperator = scan.nextLine().toLowerCase();
@@ -71,9 +73,11 @@ public class Game {
             Wait(3000);
 
             System.out.println("There's "+numOrundum+" orundum left.\n");
-            Operator Texas = new Operator("Texas",219,18.0);
+            o.setName("Texas");
+            o.setAttack(219);
+            o.setRedeploymentTime(18.0);
 
-            System.out.println(Texas.getName()+" was hired! She would however like some compensation for her work and training. The total amount will be half our current LMD amount.");
+            System.out.println(o.getName()+" was hired! She would however like some compensation for her work and training. The total amount will be half our current LMD amount.");
 
             Wait(4500);
 
@@ -89,8 +93,8 @@ public class Game {
             String askInfo = scan.nextLine().toLowerCase();
 
             if (askInfo.equals("yes")){ //want infodump
-                System.out.println("\nAfter returning from her mission in Siracusa, it is "+isSixStar+" that she has gained more experience in battle. Her redeployment time has been reduced heavily to "+Texas.getRedeploymentTime()+" seconds. It increases by "+(Texas.getRedeploymentTime()/4)+" seconds on each new redeployment.");
-                Texas.getAttack();
+                System.out.println("\nAfter returning from her mission in Siracusa, it is "+isSixStar+" that she has gained more experience in battle. Her redeployment time has been reduced heavily to "+o.getRedeploymentTime()+" seconds. It increases by "+(o.getRedeploymentTime()/4)+" seconds on each new redeployment.");
+                o.getAttack();
 
                 Wait(8000);
             } else {
@@ -182,6 +186,10 @@ public class Game {
         Integer time = 18;
         System.out.println("\nIt's been a pretty long "+time.toString()+" hours, I think I'll go to sleep. Goodnight, Doctor.");
         Wait(2000);
+    }
+    public void checkOperator(Operator o){
+        System.out.println("Doctor, let me do a file check real quick.\n");
+        System.out.println("It is "+o.equals("Texas")+" that the most recently hired operator is Texas.");
     }
 
 }
