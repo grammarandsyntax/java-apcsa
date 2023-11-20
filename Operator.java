@@ -20,6 +20,9 @@ public class Operator {
         this.attack = attack;
         this.redeploymentTime = redeploymentTime;
     }
+    public Operator(String name){
+        this.name = name;
+    }
 
     Operator() {
 
@@ -49,5 +52,8 @@ public class Operator {
 
     public void getAttack(){
         System.out.println(name+" has "+attack+" attack.");
+    }
+    public boolean equals(String s){
+        return name == s;
     }
 }
