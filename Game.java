@@ -43,6 +43,7 @@ public class Game {
         waitLater();
         endDay();
         checkOperator(o);
+        breakfastMontage();
     }
 
     public void askName(){
@@ -188,8 +189,25 @@ public class Game {
         Wait(2000);
     }
     public void checkOperator(Operator o){
-        System.out.println("Doctor, let me do a file check real quick.\n");
+        System.out.println("Good morning, Doctor, let me do a file check real quick.\n");
         System.out.println("It is "+o.equals("Texas")+" that the most recently hired operator is Texas.");
+    }
+    public void breakfastMontage(){
+        System.out.println("You must be hungry, let's go to the cafeteria.\n\n\nOne trip to the cafe later..\n");
+        String[] foods = {"Yogurt","Rice","Orange Juice","Oatmeal","Omelette","Toast","Mango Juice"};
+        for (int i=0; i<foods.length; i++){
+            if ((foods[i].toLowerCase()).indexOf("juice") >= 0){
+                System.out.print("\n*Doctor drinks ");
+            }else {
+                System.out.print("\n*Doctor eats ");
+            }
+            System.out.println(foods[i]+"*");
+        }
+        if (foods.length>=5){ //so it's adjustable
+            System.out.println("\n\nWoah, Doctor, slow down! The food won't run away!\n");
+        }else{
+            System.out.println("\n\nYou didn't finish everything? I can give the rest to Ceobe.\n");
+        }
     }
 
 }
