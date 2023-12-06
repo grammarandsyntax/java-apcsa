@@ -44,6 +44,7 @@ public class Game {
         endDay();
         checkOperator(o);
         breakfastMontage();
+        clearScreen();
     }
 
     public void askName(){
