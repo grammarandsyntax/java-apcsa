@@ -29,8 +29,8 @@ public class Game {
     }
     public Game(){
         Operator o = new Operator("Angelina");
-        askName();
-        printCurrency();
+//        askName();
+//        printCurrency();
         askToHire(o);
         waitLater();
         askAboutCook();
@@ -39,12 +39,12 @@ public class Game {
         op.startOperation(numLmd);
         clearScreen();
         waitLater();
-        ptilopsisEncounter();
-        waitLater();
-        endDay();
-        checkOperator(o);
-        breakfastMontage();
-        clearScreen();
+//        ptilopsisEncounter();
+//        waitLater();
+//        endDay();
+//        checkOperator(o);
+//        breakfastMontage();
+//        clearScreen();
     }
 
     public void askName(){
@@ -109,8 +109,16 @@ public class Game {
         }
     }
     public void waitLater(){
+        System.out.println();
         Wait(3000);
-        System.out.println("\nA bit later...\n");
+        for (int i = 0; i < 4; i++){
+            for (int j = 0; j < 22; j++){
+                System.out.print("#");
+            }
+            if (i==1) System.out.print("\n##  A bit later...  ##");
+            System.out.println();
+        }
+        System.out.println();
         Wait(2000);
     }
     public void askAboutCook(){
